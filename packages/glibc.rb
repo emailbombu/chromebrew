@@ -16,47 +16,48 @@ class Glibc < Package
   # this functionality is provided by libtirpc
 
   case LIBC_VERSION
-  when '2.23'
+  when '2.9'
     version LIBC_VERSION
-    source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.23.tar.xz'
-    source_sha256 '94efeb00e4603c8546209cefb3e1a50a5315c86fa9b078b6fad758e187ce13e9'
+    #source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.23.tar.xz'
+    source_url 'https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.9.tar.gz'
+    #source_sha256 '94efeb00e4603c8546209cefb3e1a50a5315c86fa9b078b6fad758e187ce13e9'
 
     binary_url({
       i686: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.23_i686/glibc-2.23-chromeos-i686.tar.xz'
     })
-    binary_sha256({
-      i686: '52145b65cb49c2751f69d4c46636f0685f2abb6685d8a080b71b2f091595a950'
-    })
-  when '2.27'
-    version LIBC_VERSION
-    source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.27.tar.xz'
-    source_sha256 '5172de54318ec0b7f2735e5a91d908afe1c9ca291fec16b5374d9faadfc1fc72'
+   # binary_sha256({
+   #   i686: '52145b65cb49c2751f69d4c46636f0685f2abb6685d8a080b71b2f091595a950'
+   #})
+ # when '2.27'
+  #  version LIBC_VERSION
+   # source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.27.tar.xz'
+    #source_sha256 '5172de54318ec0b7f2735e5a91d908afe1c9ca291fec16b5374d9faadfc1fc72'
 
     binary_url({
       aarch64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.27_armv7l/glibc-2.27-chromeos-armv7l.tar.xz',
        armv7l: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.27_armv7l/glibc-2.27-chromeos-armv7l.tar.xz',
        x86_64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.27_x86_64/glibc-2.27-chromeos-x86_64.tar.xz'
     })
-    binary_sha256({
-      aarch64: '64b4b73e2096998fd1a0a0e7d18472ef977aebb2f1cad83d99c77e164cb6a1d6',
-       armv7l: '64b4b73e2096998fd1a0a0e7d18472ef977aebb2f1cad83d99c77e164cb6a1d6',
-       x86_64: '5fe94642dbbf900d22b715021c73ac1a601b81517f0da1e7413f0af8fbea7997'
-    })
-  when '2.32' # All architectures with updates past M92.
-    version '2.32-1'
-    source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.32.tar.xz'
-    source_sha256 '1627ea54f5a1a8467032563393e0901077626dc66f37f10ee6363bb722222836'
+    #binary_sha256({
+      #aarch64: '64b4b73e2096998fd1a0a0e7d18472ef977aebb2f1cad83d99c77e164cb6a1d6',
+       #armv7l: '64b4b73e2096998fd1a0a0e7d18472ef977aebb2f1cad83d99c77e164cb6a1d6',
+       #x86_64: '5fe94642dbbf900d22b715021c73ac1a601b81517f0da1e7413f0af8fbea7997'
+    #})
+  #when '2.32' # All architectures with updates past M92.
+   # version '2.32-1'
+    #source_url 'https://ftpmirror.gnu.org/glibc/glibc-2.32.tar.xz'
+    #source_sha256 '1627ea54f5a1a8467032563393e0901077626dc66f37f10ee6363bb722222836'
 
-    binary_url({
-      aarch64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_armv7l/glibc-2.32-1-chromeos-armv7l.tpxz',
-       armv7l: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_armv7l/glibc-2.32-1-chromeos-armv7l.tpxz',
-       x86_64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_x86_64/glibc-2.32-1-chromeos-x86_64.tpxz'
-    })
-    binary_sha256({
-      aarch64: '9a75b9c77f8a131268f8df3db2066fe0e23513a40cdf45e6093d14e11ee2d394',
-       armv7l: '9a75b9c77f8a131268f8df3db2066fe0e23513a40cdf45e6093d14e11ee2d394',
-       x86_64: '6f27b75e77a2613fff24d36aa176f8a352a26adb8f58fbe7e75e400b84699719'
-    })
+    #binary_url({
+      #aarch64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_armv7l/glibc-2.32-1-chromeos-armv7l.tpxz',
+       #armv7l: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_armv7l/glibc-2.32-1-chromeos-armv7l.tpxz',
+       #x86_64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/glibc/2.32-1_x86_64/glibc-2.32-1-chromeos-x86_64.tpxz'
+    #})
+    #binary_sha256({
+      #aarch64: '9a75b9c77f8a131268f8df3db2066fe0e23513a40cdf45e6093d14e11ee2d394',
+       #armv7l: '9a75b9c77f8a131268f8df3db2066fe0e23513a40cdf45e6093d14e11ee2d394',
+       #x86_64: '6f27b75e77a2613fff24d36aa176f8a352a26adb8f58fbe7e75e400b84699719'
+    #})
 
   end
 
